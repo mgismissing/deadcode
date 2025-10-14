@@ -1,0 +1,22 @@
+:root {
+    --c-0: #000000;
+    --c-1: #00ff00;
+    --c-2: #ffffff;
+    --t-p: 16px;
+    --t-h1: 32px;
+}
+
+body {
+    background-color: var(--c-0);
+    color: var(--c-1);
+    font-family: "VT323", monospace;
+}
+
+p {
+    color: var(--c-2);
+    font-size: var(--t-p)
+}
+
+h1 {
+    font-size: var(--t-h1)
+}
