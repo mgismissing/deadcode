@@ -1,22 +1,55 @@
 :root {
+    --c-bg: #000050;
     --c-0: #000000;
     --c-1: #00ff00;
     --c-2: #ffffff;
     --t-p: 16px;
     --t-h1: 32px;
+    background-color: var(--c-bg);
+    background-image: url("/assets/images/background.png");
+}
+
+@font-face {
+    font-family: "VGA 8x16";
+    font-weight: normal;
+    src: url("/assets/fonts/IBMVGAPlus_8x16.woff") format("woff");
 }
 
 body {
     background-color: var(--c-0);
-    color: var(--c-1);
-    font-family: "VT323", monospace;
+    color: var(--c-2);
+    margin: 0px 0px;
+    width: 640px;
+    height: 480px;
+}
+
+* {
+    font-family: "VGA 8x16", monospace;
+    font-weight: normal;
+    font-size: var(--t-p);
 }
 
 p {
-    color: var(--c-2);
-    font-size: var(--t-p)
+    margin: 0px;
 }
 
 h1 {
-    font-size: var(--t-h1)
+    color: var(--c-1);
+    font-size: var(--t-h1);
+    margin: 16px 0px 0px 0px;
+}
+
+a {
+    color: var(--c-1);
+    text-decoration: inherit;
+}
+
+/* header */
+header > links {
+    margin: 0px 8px;
+}
+
+/* main */
+main {
+    margin: 0px 8px;
 }
