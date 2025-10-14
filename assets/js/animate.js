@@ -10,7 +10,7 @@ function animate() {
             }
             function step() {
                 if (i >= text.length) {
-                    obj.textContent = tbuf;
+                    obj.innerHTML = tbuf;
                     done();
                     return resolve();
                 }
@@ -29,7 +29,7 @@ function animate() {
                         break;
                 }
                 tbuf += c;
-                obj.textContent = tbuf + "█";
+                obj.innerHTML = tbuf + "<cursor>█</cursor>";
                 i++;
                 setTimeout(step, d)
             }
@@ -37,12 +37,14 @@ function animate() {
         });
     }
 
-    const CHAR_DELAY = 30;
+    const CHAR_DELAY = 50;
 
     let all = document.getElementsByClassName("anim-type");
     for (var i = 0; i < all.length; i++) {
         const element = all[i];
-        typeString(element, element.textContent, 20)
+        let speed = 20;
+        if (element.classList.contains("slow")) speed = 50;
+        typeString(element, element.innerHTML, speed);
     }
 }
 animate();
