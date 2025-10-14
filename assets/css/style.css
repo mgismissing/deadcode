@@ -36,7 +36,7 @@ p {
 h1 {
     color: var(--c-1);
     font-size: var(--t-h1);
-    margin: 16px 0px 0px 0px;
+    margin: 0px;
 }
 
 a {
